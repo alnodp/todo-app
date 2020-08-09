@@ -6,17 +6,19 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
+import { ToolBoxComponent } from './components/tool-box/tool-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     HeaderComponent,
-    TodoCardComponent
+    TodoCardComponent,
+    ToolBoxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

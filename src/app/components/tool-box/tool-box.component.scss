@@ -1,0 +1,42 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.tool-box {
+
+  &__content-box {
+    position: absolute;
+    right: 20px;
+    min-width: 108px;
+    height: auto;
+    border-radius: 8px;
+    background-color: $white;
+    padding: 9px;
+    box-shadow: 0 4px 16px 0 rgba(71, 87, 162, 0.34);
+    z-index: 1;
+
+    &__option {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      margin: 6px 0;
+      &__icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__name {
+        @include gilroy-bold-font($title-primary-4, 14px);
+        font-weight: 600;
+        line-height: 1.4;
+        margin-left: 7px;
+        &--disable {
+          color: $disable;
+        }
+      }
+    }
+  }
+}

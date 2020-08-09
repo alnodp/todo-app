@@ -50,6 +50,9 @@
         font-weight: 700;
         margin-bottom: 8px;
       }
+      &__options {
+        cursor: pointer;
+      }
     }
     &__note {
       @include gilroy-bold-font($title-primary-3, 13px);
