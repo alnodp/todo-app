@@ -24,7 +24,7 @@ export class TodoListComponent implements OnInit {
   private initializeHeader() {
     const currentDate = this.utilsService.getHeaderFormatDate();
     const avatarUrl = 'https://api.adorable.io/avatars/48/amlopezr90@gmail.com';
-    this.headerData = new HeaderModel('To do list', currentDate, avatarUrl);
+    this.headerData = new HeaderModel('To do list', currentDate, false, avatarUrl);
   }
 
 }

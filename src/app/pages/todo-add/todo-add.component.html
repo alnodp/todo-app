@@ -1,6 +1,28 @@
 <div class="todo-add">
-  <app-header [headerData]="headerData"></app-header>
+  <app-header [headerData]="headerData" (goBackEvent)="goBack()"></app-header>
 
   <div class="todo-add__content">
+    <div class="todo-add__content__title">Nueva Tarea</div>
+    <form [formGroup]="todoAddForm" (ngSubmit)="onSubmit()" novalidate class="todo-add__content__form">
+      <input [ngClass]="{'input--error': todoAddForm.get('title').invalid && todoAddForm.get('title').dirty}"
+             autocomplete="off"
+             class="todo-add__content__form__input input"
+             formControlName="title"
+             maxlength="30"
+             id="todo-add__content__form__input-title"
+             name="'todo-add__content__form__input-title'" placeholder="Titulo" type="text" required/>
+
+      <textarea [ngClass]="{'textarea--error': todoAddForm.get('note').invalid && todoAddForm.get('note').dirty}"
+             required
+             class="todo-add__content__form__text-area textarea"
+             formControlName="note" rows="5" cols="5"
+             id="todo-add__content__form__text-area-note"
+             name="'todo-add__content__form__text-area-note'" placeholder="Nota..."></textarea>
+
+      <button type="submit" class="todo-add__content__form__submit btn-form" id="register-account_btn"
+              [disabled]="todoAddForm.invalid"> Guardar nota </button>
+    </form>
+
+  </div>
 
 </div>

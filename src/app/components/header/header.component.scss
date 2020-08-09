@@ -3,30 +3,56 @@
 
 .header {
   background-color: $white;
-  padding: 38px 16px 40px;
+  padding: 10px 16px 40px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  &__info {
+  &__top-bar {
+    width: 100%;
+    min-height: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    &__title {
-      @include gilroy-bold-font($title-primary-1, 26px);
-      font-weight: 700;
-    }
-    &__description {
-      @include gilroy-regular-font($title-primary-2, 14px);
-      font-weight: 400;
-      text-transform: capitalize;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &__back-btn {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
     }
   }
-  &__avatar {
-    width: 48px;
-    height: 48px;
-    background-color: $gray;
-    border-radius: 50%;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      &__title {
+        @include gilroy-bold-font($title-primary-1, 26px);
+        font-weight: 700;
+      }
+      &__description {
+        @include gilroy-regular-font($title-primary-2, 14px);
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+    }
+    &__avatar, img {
+      width: 48px;
+      height: 48px;
+      background-color: $gray;
+      border-radius: 50%;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {HeaderModel} from '../../models/header.model';
 
 @Component({
@@ -8,10 +8,15 @@ import {HeaderModel} from '../../models/header.model';
 })
 export class HeaderComponent implements OnInit {
   @Input() headerData: HeaderModel;
+  @Output() goBackEvent = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goBack() {
+    this.goBackEvent.emit(true);
   }
 
 }
