@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import {HeaderModel} from '../../models/header.model';
 import {UtilsService} from '../../services/utils/utils.service';
 import {Router} from '@angular/router';
+import {HeaderModel} from '../../models/header.model';
 
 @Component({
-  selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.scss']
+  selector: 'app-todo-add',
+  templateUrl: './todo-add.component.html',
+  styleUrls: ['./todo-add.component.scss']
 })
-export class TodoListComponent implements OnInit {
+export class TodoAddComponent implements OnInit {
   headerData: HeaderModel;
 
   constructor(private utilsService: UtilsService, private router: Router) {
     this.initializeHeader();
   }
 
-  ngOnInit() {}
-
-  addNote() {
-    this.router.navigate(['add']);
+  ngOnInit(): void {
   }
 
   private initializeHeader() {

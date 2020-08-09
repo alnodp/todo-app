@@ -7,6 +7,7 @@ import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
 import { ToolBoxComponent } from './components/tool-box/tool-box.component';
+import { TodoAddComponent } from './pages/todo-add/todo-add.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ToolBoxComponent } from './components/tool-box/tool-box.component';
     TodoListComponent,
     HeaderComponent,
     TodoCardComponent,
-    ToolBoxComponent
+    ToolBoxComponent,
+    TodoAddComponent
   ],
   imports: [
     BrowserModule,

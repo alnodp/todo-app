@@ -1,0 +1,14 @@
+@import '../../../scss/colors';
+
+.todo-add {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background-primary;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &__content {
+    width: inherit;
+    padding: 23px 16px 16px;
+  }
+}
