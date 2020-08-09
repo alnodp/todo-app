@@ -1,0 +1,31 @@
+@import '../../../scss/mixins';
+@import '../../../scss/colors';
+
+.header {
+  background-color: $white;
+  padding: 38px 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    &__title {
+      @include gilroy-bold-font($title-primary-1, 26px);
+      font-weight: 700;
+    }
+    &__description {
+      @include gilroy-regular-font($title-primary-2, 14px);
+      font-weight: 400;
+    }
+  }
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    background-color: $gray;
+    border-radius: 50%;
+  }
+}

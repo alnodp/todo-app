@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TodoCardComponent } from './components/todo-card/todo-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListComponent,
+    HeaderComponent,
+    TodoCardComponent
   ],
   imports: [
     BrowserModule,

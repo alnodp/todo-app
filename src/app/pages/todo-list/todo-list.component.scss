@@ -1,0 +1,28 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.todo-list {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background-primary;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &__content {
+    width: inherit;
+    padding: 23px 16px 16px;
+
+    &__title {
+      @include gilroy-bold-font($title-primary-1, 19px);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
