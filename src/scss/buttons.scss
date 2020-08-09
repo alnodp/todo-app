@@ -1,0 +1,12 @@
+@import 'colors';
+
+.btn-add {
+  width: 64px;
+  height: 64px;
+  background-color: $btn-primary;
+  border-radius: 50%;
+  background-image: url('/assets/icons/icon-plus-thin.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

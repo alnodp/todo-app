@@ -25,4 +25,10 @@
       align-items: center;
     }
   }
+
+  &__btn-add {
+    position: fixed;
+    right: 26px;
+    bottom: 24px;
+  }
 }

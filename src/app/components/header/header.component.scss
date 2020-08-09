@@ -20,6 +20,7 @@
     &__description {
       @include gilroy-regular-font($title-primary-2, 14px);
       font-weight: 400;
+      text-transform: capitalize;
     }
   }
   &__avatar {

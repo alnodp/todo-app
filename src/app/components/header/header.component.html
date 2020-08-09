@@ -1,7 +1,9 @@
 <div class="header">
   <div class="header__info">
-    <div class="header__info__title">To do list</div>
-    <div class="header__info__description">Viernes, 17 de Febrero</div>
+    <div class="header__info__title">{{headerData.title}}</div>
+    <div class="header__info__description">{{headerData.description}}</div>
   </div>
-  <div class="header__avatar"></div>
+  <div class="header__avatar">
+    <img *ngIf="headerData.imagePath" class="header__avatar" src="{{headerData.imagePath}}" alt="Avatar"/>
+  </div>
 </div>

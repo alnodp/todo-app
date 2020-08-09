@@ -1,10 +1,14 @@
 <div class="todo-list">
-  <app-header></app-header>
+  <app-header [headerData]="headerData"></app-header>
 
   <div class="todo-list__content">
     <div class="todo-list__content__title">Tareas</div>
     <div class="todo-list__content__cards">
       <app-todo-card></app-todo-card>
+      <app-todo-card></app-todo-card>
+      <app-todo-card></app-todo-card>
     </div>
   </div>
+
+  <div class="todo-list__btn-add btn-add"></div>
 </div>
