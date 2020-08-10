@@ -40,3 +40,11 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .tool-box {
+    &__content-box {
+      right: 27%;
+    }
+  }
+}

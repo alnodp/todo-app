@@ -37,7 +37,7 @@ export class TodoUserComponent implements OnInit {
   private initForm() {
     this.todoUserForm = this.fb.group({
       userName: [{ value: '', disabled: false }, [Validators.required]],
-      userEmail: [{ value: '', disabled: false }, [Validators.required]],
+      userEmail: [{ value: '', disabled: false }, [Validators.required, Validators.email]],
     });
   }
 

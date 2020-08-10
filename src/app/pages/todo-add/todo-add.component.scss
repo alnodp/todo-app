@@ -51,3 +51,19 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .todo-add {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__form {
+        width: 50%;
+      }
+    }
+  }
+}
+
