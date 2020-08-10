@@ -2,11 +2,11 @@
 @import 'mixins';
 
 .btn-add {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   background-color: $btn-primary;
   border-radius: 50%;
-  background-image: url('/assets/icons/icon-plus-thin.svg');
+  background-image: url('/assets/icons/add-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
   outline: none;

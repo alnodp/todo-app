@@ -34,6 +34,16 @@
         width: calc(100% - 32px);
         margin: 8px 0;
       }
+
+      &__checkbox {
+        width: calc(100% - 32px);
+        display: flex;
+        gap: 5px;
+        justify-content: flex-start;
+        align-items: center;
+        @include gilroy-medium-font($title-primary-1, 14px);
+      }
+
       &__submit {
         width: calc(100% - 16px);
         margin-top: 16px;

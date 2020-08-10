@@ -40,3 +40,15 @@
     border: solid 1px $finished;
   }
 }
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: solid 1px $gray;
+  background-color: $white;
+  &:focus {
+    outline: none;
+    border: solid 1px $title-primary-1;
+  }
+}

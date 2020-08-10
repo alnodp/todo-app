@@ -23,6 +23,28 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      &__card {
+        width: 100%;
+      }
+
+      &__empty {
+        width: calc(100% - 64px);
+        background-color: $white;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          @include gilroy-medium-font($title-primary-2, 16px);
+          font-weight: 700;
+          margin: 6px;
+          text-align: center;
+        }
+      }
     }
   }
 

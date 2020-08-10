@@ -3,7 +3,7 @@
 
 .todo-card {
   width: calc(100% - 64px);
-  min-height: 209px;
+  min-height: 150px;
   background-color: $white;
   padding: 16px;
   margin: 6px 0;
@@ -23,7 +23,7 @@
     align-items: center;
     margin: 16px 0;
 
-    &__avatar {
+    &__avatar, img {
       width: 24px;
       height: 24px;
       background-color: $gray;
