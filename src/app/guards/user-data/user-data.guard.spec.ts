@@ -1,12 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 
 import { UserDataGuard } from './user-data.guard';
+import {RouterTestingModule} from '@angular/router/testing';
+import {TodoUserComponent} from '../../pages/todo-user/todo-user.component';
 
 describe('UserDataGuard', () => {
   let guard: UserDataGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule.withRoutes([
+          { path: 'user', component: TodoUserComponent },
+        ])
+      ]
+    });
     guard = TestBed.inject(UserDataGuard);
   });
 
