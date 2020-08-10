@@ -1,0 +1,75 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.todo-list {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background-primary;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &__content {
+    width: inherit;
+    padding: 23px 16px 16px;
+
+    &__title {
+      @include gilroy-bold-font($title-primary-1, 19px);
+      font-weight: 700;
+      margin-bottom: 6px;
+
+      span {
+        @include gilroy-bold-font($title-primary-2, 13px);
+      }
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__card {
+        width: 100%;
+      }
+
+      &__empty {
+        width: calc(100% - 64px);
+        background-color: $white;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          @include gilroy-medium-font($title-primary-2, 16px);
+          font-weight: 700;
+          margin: 6px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__btn-add {
+    position: fixed;
+    right: 26px;
+    bottom: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .todo-list {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__cards {
+        width: 50%;
+      }
+    }
+  }
+}

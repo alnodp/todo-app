@@ -1,0 +1,19 @@
+<div class="todo-list">
+  <app-header [headerData]="headerData"></app-header>
+
+  <div class="todo-list__content">
+    <div class="todo-list__content__title">Tareas <span *ngIf="todoList.length > 0">({{todoList.length}} asignadas)</span></div>
+    <div class="todo-list__content__cards">
+      <div class="todo-list__content__cards__card" *ngFor="let cardData of todoList">
+        <app-todo-card [cardData]="cardData" (toolBoxOption)="toolBoxOptionSelected($event, cardData)"></app-todo-card>
+      </div>
+    </div>
+    <div class="todo-list__content__cards__empty" *ngIf="todoList.length === 0">
+      <i class="far fa-folder-open"></i>
+      <span>No tienes<br>
+        notas guardadas</span>
+    </div>
+  </div>
+
+  <div class="todo-list__btn-add btn-add" (click)="addNote()"></div>
+</div>

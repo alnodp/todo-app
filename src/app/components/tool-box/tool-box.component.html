@@ -1,0 +1,15 @@
+<div class="tool-box">
+  <div class="tool-box__icon" (click)="showToolBox = !showToolBox">
+    <i class="fas fa-ellipsis-v icon-disable"></i>
+  </div>
+
+  <div class="tool-box__content-box" *ngIf="showToolBox">
+    <div class="tool-box__content-box__option" *ngFor="let toolBoxOption of toolBoxOptionList" (click)="selectOption(toolBoxOption)">
+      <div class="tool-box__content-box__option__icon">
+        <i class="{{toolBoxOption.iconName}}" [ngClass]="toolBoxOption.isActive ? 'icon-active' : 'icon-disable'"></i>
+      </div>
+      <div class="tool-box__content-box__option__name"
+           [ngClass]="{'tool-box__content-box__option__name--disable': !toolBoxOption.isActive}">{{toolBoxOption.optionName}}</div>
+    </div>
+  </div>
+</div>

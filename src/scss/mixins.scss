@@ -1,0 +1,23 @@
+@mixin gilroy-bold-font($color, $size: null) {
+  font-family: Gilroy-Bold, Helvetica, sans-serif;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin gilroy-medium-font($color, $size: null) {
+  font-family: Gilroy-Medium, Helvetica, sans-serif;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin gilroy-regular-font($color, $size: null) {
+  font-family: Gilroy-Regular, Helvetica, sans-serif;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin gilroy-light-font($color, $size: null) {
+  font-family: Gilroy-Light, Helvetica, sans-serif;
+  color: $color;
+  font-size: $size;
+}

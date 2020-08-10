@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'mixins';
+
+.btn-add {
+  width: 56px;
+  height: 56px;
+  background-color: $btn-primary;
+  border-radius: 50%;
+  background-image: url('/assets/icons/add-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+.btn-form {
+  width: 100%;
+  height: 34px;
+  border-radius: 8px;
+  border: solid 1px $btn-primary;
+  background-color: $btn-primary;
+  @include gilroy-medium-font($white, 16px);
+  outline: none;
+  padding: 8px;
+
+  &:disabled {
+    @include gilroy-medium-font($gray, 16px);
+    border: solid 1px $gray;
+    background-color: $background-primary;
+  }
+}

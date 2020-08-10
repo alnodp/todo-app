@@ -1,0 +1,28 @@
+<div class="todo-user">
+  <app-header [headerData]="headerData"></app-header>
+
+  <div class="todo-user__content">
+    <div class="todo-user__content__title">Nuevo Usuario</div>
+    <form [formGroup]="todoUserForm" (ngSubmit)="onSubmit()" novalidate class="todo-user__content__form">
+      <input [ngClass]="{'input--error': todoUserForm.get('userName').invalid && todoUserForm.get('userName').dirty}"
+             autocomplete="off"
+             class="todo-user__content__form__input input"
+             formControlName="userName"
+             maxlength="30"
+             id="todo-user__content__form__input-user-name"
+             name="'todo-user__content__form__input-user-name'" placeholder="Andres L." type="text" required/>
+
+      <input [ngClass]="{'input--error': todoUserForm.get('userEmail').invalid && todoUserForm.get('userEmail').dirty}"
+             autocomplete="off"
+             class="todo-user__content__form__input input"
+             formControlName="userEmail"
+             id="todo-user__content__form__input-user-email"
+             name="'todo-user__content__form__input-user-email'" placeholder="user@email.com" type="email" required/>
+
+      <button type="submit" class="todo-user__content__form__submit btn-form" id="register-account_btn"
+              [disabled]="todoUserForm.invalid">Ingresar</button>
+    </form>
+
+  </div>
+
+</div>
