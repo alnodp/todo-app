@@ -1,20 +1,24 @@
 <div class="todo-card">
-  <div class="todo-card__status">Activa</div>
+  <div class="todo-card__status" [ngClass]="{'todo-card__status--finished': cardData.status === TODO_STATUS.FINISHED}">
+    {{cardData.status === TODO_STATUS.ACTIVE ? 'Activa' : 'Finalizada'}}
+  </div>
   <div class="todo-divider"></div>
   <div class="todo-card__author">
-    <div class="todo-card__author__avatar"></div>
-    <div class="todo-card__author__name">Juanita Pérez</div>
+    <div class="todo-card__author__avatar">
+      <img *ngIf="cardData.authorAvatarPath" src="{{cardData.authorAvatarPath}}" alt="Avatar">
+    </div>
+    <div class="todo-card__author__name">{{cardData.authorName}}</div>
   </div>
 
   <div class="todo-card__info">
     <div class="todo-card__info__header">
-      <div class="todo-card__info__header__title">Título de la tarea</div>
+      <div class="todo-card__info__header__title">{{cardData.title}}</div>
       <div class="todo-card__info__header__options">
-        <app-tool-box></app-tool-box>
+        <app-tool-box [toolBoxOptionList]="cardData.toolBoxOptions" (optionSelected)="toolBoxOptionSelected($event)"></app-tool-box>
       </div>
     </div>
     <div class="todo-card__info__note">
-      When you enter into any new area of science, you almost always find yourself with a baffling new language.
+      {{cardData.note}}
     </div>
   </div>
 
