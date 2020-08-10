@@ -12,6 +12,7 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from '../environments/environment';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { TodoUserComponent } from './pages/todo-user/todo-user.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HeaderComponent,
     TodoCardComponent,
     ToolBoxComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    TodoUserComponent
   ],
   imports: [
     BrowserModule,

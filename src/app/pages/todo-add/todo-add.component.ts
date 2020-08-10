@@ -56,7 +56,6 @@ export class TodoAddComponent implements OnInit {
         this.router.navigate(['list']);
       }). catch( err => console.log('[ERROR] addNote', err));
     }
-    this.crudService.todoItem = null;
   }
 
   goBack() {
@@ -79,6 +78,7 @@ export class TodoAddComponent implements OnInit {
 
   private resetForm() {
     this.todoAddForm.reset();
+    this.crudService.todoItem = null;
   }
 
   private buildAddNoteRequest() {

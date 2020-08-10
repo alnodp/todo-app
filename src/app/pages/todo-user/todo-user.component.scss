@@ -1,0 +1,44 @@
+@import '../../../scss/colors';
+@import '../../../scss/mixins';
+
+.todo-user {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background-primary;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &__content {
+    width: inherit;
+    padding: 23px 16px 16px;
+
+    &__title {
+      @include gilroy-bold-font($title-primary-1, 19px);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    &__form {
+      width: calc(100% - 64px);
+      min-height: 209px;
+      background-color: $white;
+      padding: 16px;
+      margin: 6px 0;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      &__input, &__submit {
+        width: calc(100% - 32px);
+        margin: 8px 0;
+      }
+
+      &__submit {
+        width: calc(100% - 16px);
+        margin-top: 16px;
+      }
+    }
+  }
+}

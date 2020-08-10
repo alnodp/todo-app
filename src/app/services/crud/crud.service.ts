@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import {TodoNoteModel} from '../../models/todo-note.model';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {UserService} from '../user/user.service';
 
 const FIREBASE_COLLECTION_NAME = 'todo-list';
+const AUTHOR_EMAIL_KEY = 'authorEmail';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +12,11 @@ const FIREBASE_COLLECTION_NAME = 'todo-list';
 export class CrudService {
   public todoItem: TodoNoteModel;
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore, private userService: UserService) { }
 
   getNoteList() {
-    return this.firestore.collection(FIREBASE_COLLECTION_NAME).snapshotChanges();
+    return this.firestore.collection(FIREBASE_COLLECTION_NAME,
+        ref => ref.where(AUTHOR_EMAIL_KEY, '==', this.userService.userEmail)).snapshotChanges();
   }
 
   addNote(note: TodoNoteModel) {
